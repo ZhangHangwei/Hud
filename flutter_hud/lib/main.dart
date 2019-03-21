@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'hw_hud.dart';
+import 'package:flutter/cupertino.dart';
 
 void main() => runApp(MyApp());
 
@@ -42,15 +43,15 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _topBtnClick() {
-    _showToast("顶部toast 显示 1 秒", gravity: HWHudGravity.Top, delay: 1.0);
+    _showToast("顶部toast 显示 0.5 秒", gravity: HWHudGravity.Top, delay: 0.5);
   }
 
   void _centerBtnClick() {
-    _showToast("中间toast 显示 2 秒", gravity: HWHudGravity.Center);
+    _showToast("中间toast 显示 1 秒", gravity: HWHudGravity.Center, delay: 1.0);
   }
 
   void _bottomBtnClick() {
-    _showToast("底部toast 显示 3 秒", gravity: HWHudGravity.Bottom, delay: 3.0);
+    _showToast("底部toast 显示 2 秒", gravity: HWHudGravity.Bottom);
   }
 
   @override

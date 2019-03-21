@@ -5,7 +5,6 @@ enum HWHudGravity { Top, Center, Bottom }
 class HWHud {
   OverlayEntry _overlayEntry;
   bool _isShowing = false;
-  DateTime _startTime;
 
   // 默认底部
   HWHudGravity _hudGravity = HWHudGravity.Bottom;
@@ -27,7 +26,6 @@ class HWHud {
     int delayMilliseconds = (delay * 1000).floor();
 
     _hudGravity = gravity;
-    _startTime = DateTime.now();
 
     // 获取OverlayState
     final overlayState = Overlay.of(_context);
