@@ -38,17 +38,11 @@ class HWHud {
           builder: (BuildContext context) => Positioned(
               top: _toastTopMargin(),
               child: Container(
-                alignment: Alignment.center,
                 width: MediaQuery.of(context).size.width,
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 80),
-                  child: AnimatedOpacity(
-                    opacity: _isShowing ? 1.0 : 0.0,
-                    duration: _isShowing
-                        ? Duration(milliseconds: 100)
-                        : Duration(milliseconds: 400),
-                    child: _buildToastWidget(msg),
-                  ),
+                child: AnimatedOpacity(
+                  opacity: 1.0,
+                  duration: Duration(milliseconds: 500),
+                  child: _buildToastWidget(msg),
                 ),
               )));
     }
@@ -70,10 +64,10 @@ class HWHud {
         child: Card(
       color: Colors.black,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+        padding: EdgeInsets.all(10.0),
         child: Text(
           msg,
-          style: TextStyle(fontSize: 14.0, color: Colors.white),
+          style: TextStyle(fontSize: 15.0, color: Colors.white),
         ),
       ),
     ));
